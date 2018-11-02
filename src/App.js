@@ -11,6 +11,14 @@ class App extends Component {
     };
   }
 
+  async componentDidMount() {
+    let response = await fetch("http://localhost:8082/api/messages");
+    let myJson = await response.json();
+    this.setState({
+      messages: myJson
+    });
+  }
+
   render() {
     return (
       <div className="App">
