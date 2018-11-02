@@ -1,4 +1,7 @@
-let Meassage = props => {
+import React from "react";
+import "../App.css";
+
+let Message = props => {
   return (
     <div class="row message unread">
       <div class="col-xs-1">
@@ -17,3 +20,5 @@ let Meassage = props => {
     </div>
   );
 };
+
+export default Message;
