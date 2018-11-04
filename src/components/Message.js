@@ -3,7 +3,10 @@ import "../App.css";
 
 let Message = props => {
   return (
-    <div class="row message unread">
+    <div
+      className={props.message.read ? "row message read" : "row message unread"}
+      onClick={() => props.messageRead(props.message.id)}
+    >
       <div class="col-xs-1">
         <div class="row">
           <div class="col-xs-2">
