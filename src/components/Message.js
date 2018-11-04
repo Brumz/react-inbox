@@ -5,7 +5,6 @@ let Message = props => {
   return (
     <div
       className={props.message.read ? "row message read" : "row message unread"}
-      onClick={() => props.messageRead(props.message.id)}
     >
       <div class="col-xs-1">
         <div class="row">
@@ -21,7 +20,10 @@ let Message = props => {
               }
             />
           </div>
-          <div class="col-xs-2">
+          <div
+            class="col-xs-2"
+            onClick={() => props.messageRead(props.message.id)}
+          >
             <i class="star fa fa-star-o" />
           </div>
         </div>
